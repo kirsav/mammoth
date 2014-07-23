@@ -4,19 +4,19 @@ using System.Collections;
 /// <summary>
 /// Наш игровой тайл - собственно то, что содержится в клетке
 /// </summary>
-public class Tile : MonoBehaviour
+public abstract class Tile : MonoBehaviour
 {
     /// <summary>
-    /// Тип тайл. Конечно было бы правильнее использовать наследование для того чтобы создать разные типы, но мой опыт говорит, что мы в этом утонем.
-    /// И поэтому у нас тут примитивный enum
+    /// Тип тайла. С помощью наследования мы создадим разное поведение тайлов, но мой опыт говорит, что для игровой логике удобнее использовать enum
     /// </summary>
-    public TileType TileType;
+    public abstract TileType TileType { get; }
 
-}
+    /// <summary>
+    /// Пейзаж это или нет - для более быстрого поиска
+    /// </summary>
+    public abstract bool IsLandscape { get; }
 
-public enum TileType
-{
-    Mammoth,
-    Stone,
-    BigStone
+    public abstract bool IsMovable { get; }
+
+    public Cell Cell;
 }

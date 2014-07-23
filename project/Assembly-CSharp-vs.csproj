@@ -48,8 +48,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Gameplay\Cell.cs" />
      <Compile Include="Assets\Scripts\Gameplay\CellCollection.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ColorType.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Gamefield.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\IceBlockBig.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\IceBlockSmall.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Landscape.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Mammoth.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Tile.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TileType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

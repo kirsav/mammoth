@@ -19,4 +19,12 @@ public abstract class Tile : MonoBehaviour
     public abstract bool IsMovable { get; }
 
     public Cell Cell;
+
+    void OnDestroy()
+    {
+        if (Cell != null)
+        {
+            Cell.Tile = null;
+        }
+    }
 }

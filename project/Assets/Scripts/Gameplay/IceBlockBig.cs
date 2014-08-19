@@ -1,12 +1,9 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class IceBlockBig: Tile
+public class IceBlockBig : IceBlockSmall
 {
-    [SerializeField]
-    private TileType tileType;
-
-    [SerializeField] private ColorType colorType;
-
     [SerializeField]
     private bool isMovable;
 

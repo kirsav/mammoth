@@ -1,4 +1,4 @@
-internal enum ColorType
+public enum ColorType
 {
     Red,
     Orange,

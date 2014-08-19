@@ -181,8 +181,10 @@ public class CellCollection : IEnumerable
         return null;
     }
 
-    private void SetTile(Cell cell, Tile tile)
+    public static void SetTile(Cell cell, Tile tile)
     {
+        tile.ClearCell();
+
         var position = tile.transform.localPosition;
         var scale = tile.transform.localScale;
         var rotation = tile.transform.localRotation;

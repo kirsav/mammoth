@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Cell.cs" />
      <Compile Include="Assets\Scripts\Gameplay\CellCollection.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ColorType.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\GameLogic.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Gamefield.cs" />
      <Compile Include="Assets\Scripts\Gameplay\IceBlockBig.cs" />
      <Compile Include="Assets\Scripts\Gameplay\IceBlockSmall.cs" />

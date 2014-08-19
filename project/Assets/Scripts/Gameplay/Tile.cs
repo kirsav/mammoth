@@ -18,9 +18,47 @@ public abstract class Tile : MonoBehaviour
 
     public abstract bool IsMovable { get; }
 
+    public bool Highlight
+    {
+        get { return isHightlighted; }
+        set
+        {
+            if (value)
+            {
+                if (!isHightlighted)
+                {
+                    transform.localScale *= 2;
+                }
+            }
+            else
+            {
+                if (isHightlighted)
+                {
+                    transform.localScale /= 2;
+                }
+            }
+            isHightlighted = value;
+        }
+    }
+
     public Cell Cell;
+    private bool isHightlighted;
+
+    void Awake()
+    {
+        if (IsMovable)
+        {
+            var boxCollider = gameObject.AddComponent<BoxCollider>();
+            boxCollider.size = new Vector3(1, 1, 0);
+        }
+    }
 
     void OnDestroy()
+    {
+        ClearCell();
+    }
+
+    public void ClearCell()
     {
         if (Cell != null)
         {

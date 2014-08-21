@@ -13,6 +13,6 @@ public class Cell : MonoBehaviour
     {
         X = x;
         Y = y;
-        transform.position = new Vector3(x, 0, y);
+        transform.position = new Vector3(x*transform.localScale.x, 0, y*transform.localScale.z);
     }
 }
